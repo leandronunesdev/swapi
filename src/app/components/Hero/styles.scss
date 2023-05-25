@@ -1,0 +1,9 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  p {
+    color: var(--yellow);
+    font-size: 64px;
+    padding: 32px;
+  }
+}

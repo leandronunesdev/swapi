@@ -1,9 +1,12 @@
 import { ReactNode } from "react";
 import "./globals.css";
-import { Roboto_Flex as Roboto } from "next/font/google";
-import { Menu } from "./components";
+import { Lexend_Deca as LexendDeca } from "next/font/google";
+import { Hero, Menu } from "./components";
 
-const roboto = Roboto({ subsets: ["latin"], variable: "--font-roboto" });
+const lexendDeca = LexendDeca({
+  subsets: ["latin"],
+  variable: "--font-lexend-deca",
+});
 
 export const metadata = {
   title: "Star Wars Wiki",
@@ -13,7 +16,8 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={lexendDeca.className}>
+        <Hero />
         <Menu />
         {children}
       </body>

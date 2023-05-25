@@ -7,6 +7,7 @@ const query = gql`
     allFilms {
       films {
         title
+        releaseDate
       }
     }
   }
@@ -14,6 +15,7 @@ const query = gql`
 
 type Film = {
   title: string;
+  releaseDate: string;
 };
 
 const Films = async () => {
@@ -37,7 +39,11 @@ const Films = async () => {
   return (
     <div>
       {data.allFilms.films.map((film: Film) => {
-        return <li key={film.title}>{film.title}</li>;
+        return (
+          <li key={film.title}>
+            {film.title} - {film.releaseDate}
+          </li>
+        );
       })}
     </div>
   );
