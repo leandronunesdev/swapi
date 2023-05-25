@@ -1,7 +1,7 @@
 import React from "react";
-import { getClient } from "../lib/client";
+import { getClient } from "../../lib/client";
 import { gql } from "@apollo/client";
-import { ItemCard } from "../components";
+import { ItemCard } from "../../components";
 import "./styles.scss";
 
 const query = gql`

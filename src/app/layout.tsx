@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import "./globals.css";
 import { Lexend_Deca as LexendDeca } from "next/font/google";
-import { Hero, Menu } from "./components";
+import { Hero, Menu } from "../components";
 
 const lexendDeca = LexendDeca({
   subsets: ["latin"],
