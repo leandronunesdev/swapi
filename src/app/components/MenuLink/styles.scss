@@ -1,0 +1,14 @@
+.menu-link {
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--gray);
+  border: 1px solid var(--gray);
+  padding: 12px;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: var(--white);
+    color: var(--black);
+    transition: 0.5s;
+  }
+}

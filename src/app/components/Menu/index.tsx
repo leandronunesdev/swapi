@@ -5,10 +5,10 @@ import "./styles.scss";
 
 export const Menu = () => {
   const menuOptions = [
-    { href: "", name: "home" },
-    { href: "films", name: "films" },
-    { href: "characters", name: "characters" },
-    { href: "planets", name: "planets" },
+    { href: "", name: "Home" },
+    { href: "films", name: "Films" },
+    { href: "characters", name: "Characters" },
+    { href: "planets", name: "Planets" },
   ];
 
   return (
