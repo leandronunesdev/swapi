@@ -1,5 +1,10 @@
 body {
   margin: 0;
+  background-color: #0e0e0e;
+}
+
+p {
+  margin: 0;
 }
 
 * {
@@ -7,6 +12,5 @@ body {
   --black: #000000;
   --gray: #565656;
   --white: #ffffff;
-  background-color: #0e0e0e;
   color: white;
 }

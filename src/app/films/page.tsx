@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { getClient } from "../lib/client";
 import { gql } from "@apollo/client";
+import { ItemCard } from "../components";
+import "./styles.scss";
 
 const query = gql`
   query Films {
@@ -21,28 +23,17 @@ type Film = {
 const Films = async () => {
   const { data } = await getClient().query({
     query,
-    // context: {
-    //   fetchOptions: {
-    //     next: { revalidate: 5 },
-    //   },
-    // },
   });
 
-  // console.log(data.allFilms.films[0].title);
-
-  // const [films, setFilms] = useState<Film[]>([]);
-
-  // if (data) {
-  //   setFilms(data.allFilms.films);
-  // }
-
   return (
-    <div>
+    <div className="films">
       {data.allFilms.films.map((film: Film) => {
         return (
-          <li key={film.title}>
-            {film.title} - {film.releaseDate}
-          </li>
+          <ItemCard
+            key={film.title}
+            title={film.title}
+            releaseDate={film.releaseDate}
+          />
         );
       })}
     </div>
