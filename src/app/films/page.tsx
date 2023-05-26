@@ -1,6 +1,6 @@
 import React from "react";
 import { getClient } from "../../lib/client";
-import { ItemCard } from "../../components";
+import { FilmCard } from "../../components";
 import "./styles.scss";
 import { GET_FILMS } from "@/lib/queries";
 import { Film } from "@/constants/types";
@@ -13,7 +13,7 @@ const Films = async () => {
   return (
     <div className="films">
       {data.allFilms.films.map((film: Film) => {
-        return <ItemCard film={film} key={film.id} />;
+        return <FilmCard film={film} key={film.id} />;
       })}
     </div>
   );

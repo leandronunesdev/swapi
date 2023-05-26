@@ -1,4 +1,4 @@
 export * from "./Menu";
 export * from "./MenuLink";
 export * from "./Hero";
-export * from "./ItemCard";
+export * from "./FilmCard";

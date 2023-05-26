@@ -9,7 +9,7 @@ type ItemCardProps = {
   film: Film;
 };
 
-export const ItemCard = ({ film }: ItemCardProps) => {
+export const FilmCard = ({ film }: ItemCardProps) => {
   const releaseYear = new Date(film.releaseDate).getFullYear();
   const slug = film.id.slice(0, 10);
 
