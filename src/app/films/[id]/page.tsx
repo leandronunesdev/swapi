@@ -1,22 +1,12 @@
 import { getClient } from "@/lib/client";
-import { gql } from "@apollo/client";
+import { GET_FILM } from "@/lib/queries";
 import React from "react";
-
-const query = gql`
-  query Film($id: ID) {
-    film(id: $id) {
-      title
-    }
-  }
-`;
 
 const FilmDetails = async () => {
   const { data } = await getClient().query({
-    query,
+    query: GET_FILM,
     variables: { id: "ZmlsbXM6MQ==" },
   });
-
-  console.log(data.film.title);
 
   return <div>{data.film.title}</div>;
 };

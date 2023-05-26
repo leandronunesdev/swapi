@@ -1,19 +1,8 @@
 import React from "react";
 import { getClient } from "../../lib/client";
-import { gql } from "@apollo/client";
 import { ItemCard } from "../../components";
 import "./styles.scss";
-
-const query = gql`
-  query Films {
-    allFilms {
-      films {
-        title
-        releaseDate
-      }
-    }
-  }
-`;
+import { GET_FILMS } from "@/lib/queries";
 
 type Film = {
   title: string;
@@ -22,7 +11,7 @@ type Film = {
 
 const Films = async () => {
   const { data } = await getClient().query({
-    query,
+    query: GET_FILMS,
   });
 
   return (
