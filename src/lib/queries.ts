@@ -6,6 +6,7 @@ export const GET_FILMS = gql`
       films {
         title
         releaseDate
+        id
       }
     }
   }
