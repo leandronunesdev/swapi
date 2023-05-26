@@ -17,6 +17,20 @@ export const GET_FILM = gql`
   query Film($id: ID) {
     film(id: $id) {
       title
+      episodeID
+      releaseDate
+      director
+      openingCrawl
+      characterConnection {
+        characters {
+          name
+        }
+      }
+      planetConnection {
+        planets {
+          name
+        }
+      }
     }
   }
 `;

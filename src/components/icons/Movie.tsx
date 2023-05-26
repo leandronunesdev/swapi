@@ -1,13 +1,17 @@
 import React from "react";
 
-export const Movie = () => {
+type MovieIconProps = {
+  size?: number;
+};
+
+export const MovieIcon = ({ size = 32 }: MovieIconProps) => {
   return (
     <svg
       version="1.1"
       id="_x32_"
       xmlns="http://www.w3.org/2000/svg"
-      width="32px"
-      height="32px"
+      width={size}
+      height={size}
       viewBox="0 0 512 512"
     >
       <g>

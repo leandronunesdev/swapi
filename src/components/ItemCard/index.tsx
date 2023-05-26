@@ -1,5 +1,5 @@
 import React from "react";
-import { Movie } from "../icons/Movie";
+import { MovieIcon } from "../icons";
 import "./styles.scss";
 import Link from "next/link";
 import { Film } from "@/constants/types";
@@ -15,7 +15,7 @@ export const ItemCard = ({ film }: ItemCardProps) => {
 
   return (
     <Link className="item-card" href={`/films/${slug}`}>
-      <Movie />
+      <MovieIcon />
       <p>Episode {convertToRoman(film.episodeID)}</p>
       <p>{film.title}</p>
       <p>{releaseYear}</p>

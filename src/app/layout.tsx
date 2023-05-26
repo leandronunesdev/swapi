@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import "./globals.css";
+import "./globals.scss";
 import { Lexend_Deca as LexendDeca } from "next/font/google";
 import { Hero, Menu } from "../components";
 
@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className={lexendDeca.className}>
         <Hero />
         <Menu />
-        {children}
+        <div className="content">{children}</div>
       </body>
     </html>
   );
