@@ -3,6 +3,7 @@ import { Movie } from "../icons/Movie";
 import "./styles.scss";
 import Link from "next/link";
 import { Film } from "@/constants/types";
+import { convertToRoman } from "@/utils/convertToRoman";
 
 type ItemCardProps = {
   film: Film;
@@ -15,6 +16,7 @@ export const ItemCard = ({ film }: ItemCardProps) => {
   return (
     <Link className="item-card" href={`/films/${slug}`}>
       <Movie />
+      <p>Episode {convertToRoman(film.episodeID)}</p>
       <p>{film.title}</p>
       <p>{releaseYear}</p>
     </Link>

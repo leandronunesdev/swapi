@@ -7,6 +7,7 @@ export const GET_FILMS = gql`
         title
         releaseDate
         id
+        episodeID
       }
     }
   }
