@@ -34,3 +34,14 @@ export const GET_FILM = gql`
     }
   }
 `;
+
+export const GET_ALL_PEOPLE = gql`
+  query allPeople {
+    allPeople {
+      people {
+        name
+        id
+      }
+    }
+  }
+`;

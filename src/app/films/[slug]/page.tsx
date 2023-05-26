@@ -29,8 +29,6 @@ const FilmDetails = async ({ params }: { params: { slug: string } }) => {
     characterConnection,
   } = data.film;
 
-  console.log("here", characterConnection.characters);
-
   const releaseYear = new Date(releaseDate).getFullYear();
 
   return (
@@ -46,7 +44,7 @@ const FilmDetails = async ({ params }: { params: { slug: string } }) => {
       <p>{openingCrawl}</p>
       <h2>Characters:</h2>
       <ul>
-        {characterConnection.characters.map((character): JSX.Element => {
+        {characterConnection.characters.map((character: Character) => {
           return <li key={character.name}>{character.name}</li>;
         })}
       </ul>

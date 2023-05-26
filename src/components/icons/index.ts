@@ -1,1 +1,2 @@
-export * from "./Movie";
+export * from "./MovieIcon";
+export * from "./CharacterIcon";

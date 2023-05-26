@@ -15,6 +15,7 @@ export type Film = {
 
 export type Character = {
   name: string;
+  id: string;
 };
 
 export type Planet = {
