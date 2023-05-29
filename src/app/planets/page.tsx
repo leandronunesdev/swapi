@@ -9,7 +9,6 @@ const Planets = async () => {
     query: GET_PLANETS,
   });
 
-  console.log(data.allPlanets.planets);
   return (
     <CardsGrid>
       {data.allPlanets.planets.map((planet: Planet) => {

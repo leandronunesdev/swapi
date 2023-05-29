@@ -24,6 +24,9 @@ export type Character = {
   height: number;
   mass: number;
   skinColor: string;
+  filmConnection: {
+    films: Film[];
+  };
 };
 
 export type Planet = {

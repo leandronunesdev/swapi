@@ -1,9 +1,9 @@
-import { CharacterIcon, DetailsPage } from "@/components";
-import { Character } from "@/constants/types";
+import { CharacterIcon, CustomLink, DetailsPage } from "@/components";
+import { Character, Film } from "@/constants/types";
 import { getClient } from "@/lib/client";
 import { GET_PERSON } from "@/lib/queries";
 import React from "react";
-import "./styles.scss";
+import Link from "next/link";
 
 type CharacterData = {
   data: {
@@ -29,16 +29,20 @@ const CharacterDetails = async ({ params }: { params: { slug: string } }) => {
     height,
     mass,
     skinColor,
+    filmConnection,
   } = data.person;
 
   return (
-    <DetailsPage className="character">
+    <DetailsPage>
       <div>
         <CharacterIcon size={40} />
       </div>
       <h1>{name}</h1>
       <p>
-        Homeworld: <strong>{homeworld.name}</strong>
+        Homeworld:{" "}
+        <strong>
+          <Link href={`/planets/${homeworld.id}`}>{homeworld.name}</Link>
+        </strong>
       </p>
       <p>
         Birth Year: <strong>{birthYear}</strong>
@@ -61,6 +65,17 @@ const CharacterDetails = async ({ params }: { params: { slug: string } }) => {
       <p>
         Skin Color: <strong>{skinColor}</strong>
       </p>
+      <p>Films:</p>
+      <ul>
+        {filmConnection.films.map((film: Film) => (
+          <CustomLink
+            title={film.title}
+            key={film.id}
+            id={film.id}
+            type={"films"}
+          />
+        ))}{" "}
+      </ul>
     </DetailsPage>
   );
 };

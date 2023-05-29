@@ -24,11 +24,13 @@ export const GET_FILM = gql`
       characterConnection {
         characters {
           name
+          id
         }
       }
       planetConnection {
         planets {
           name
+          id
         }
       }
     }
@@ -52,6 +54,7 @@ export const GET_PERSON = gql`
       name
       homeworld {
         name
+        id
       }
       birthYear
       eyeColor
@@ -60,6 +63,12 @@ export const GET_PERSON = gql`
       height
       mass
       skinColor
+      filmConnection {
+        films {
+          title
+          id
+        }
+      }
     }
   }
 `;

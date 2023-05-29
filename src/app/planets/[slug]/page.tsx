@@ -3,7 +3,6 @@ import { Character, Film, Planet } from "@/constants/types";
 import { getClient } from "@/lib/client";
 import { GET_PLANET } from "@/lib/queries";
 import React from "react";
-import "./styles.scss";
 
 type PlanetData = {
   data: {
@@ -33,22 +32,24 @@ const PlanetDetails = async ({ params }: { params: { slug: string } }) => {
   } = data.planet;
 
   return (
-    <DetailsPage className="planet">
+    <DetailsPage>
       <div>
         <PlanetIcon size={40} />
       </div>
       <h1>{name}</h1>
+      {population && (
+        <p>
+          Population: <strong>{population.toLocaleString("en-US")}</strong>
+        </p>
+      )}
       <p>
-        Population: <strong>{population}</strong>
+        Diameter: <strong>{diameter.toLocaleString("en-US")}</strong>
       </p>
       <p>
-        Diameter: <strong>{diameter}</strong>
+        Orbital Period: <strong>{orbitalPeriod} days</strong>
       </p>
       <p>
-        Orbital Period: <strong>{orbitalPeriod}</strong>
-      </p>
-      <p>
-        Rotation Period: <strong>{rotationPeriod}</strong>
+        Rotation Period: <strong>{rotationPeriod} hours</strong>
       </p>
       <p>
         Surface Water: <strong>{surfaceWater}%</strong>
@@ -76,17 +77,21 @@ const PlanetDetails = async ({ params }: { params: { slug: string } }) => {
           />
         ))}{" "}
       </ul>
-      <p>Characters:</p>
-      <ul>
-        {residentConnection.residents.map((character: Character) => (
-          <CustomLink
-            title={character.name}
-            key={character.id}
-            id={character.id}
-            type={"characters"}
-          />
-        ))}{" "}
-      </ul>
+      {residentConnection.residents.length > 0 && (
+        <>
+          <p>Characters:</p>
+          <ul>
+            {residentConnection.residents.map((character: Character) => (
+              <CustomLink
+                title={character.name}
+                key={character.id}
+                id={character.id}
+                type={"characters"}
+              />
+            ))}{" "}
+          </ul>
+        </>
+      )}
     </DetailsPage>
   );
 };
