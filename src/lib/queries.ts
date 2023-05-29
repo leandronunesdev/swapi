@@ -74,3 +74,29 @@ export const GET_PLANETS = gql`
     }
   }
 `;
+
+export const GET_PLANET = gql`
+  query planet($id: ID) {
+    planet(id: $id) {
+      name
+      climates
+      diameter
+      orbitalPeriod
+      population
+      rotationPeriod
+      surfaceWater
+      terrains
+      filmConnection {
+        films {
+          title
+        }
+      }
+      residentConnection {
+        residents {
+          name
+          id
+        }
+      }
+    }
+  }
+`;

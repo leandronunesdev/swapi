@@ -29,4 +29,17 @@ export type Character = {
 export type Planet = {
   name: string;
   id: string;
+  climates: string[];
+  diameter: number;
+  orbitalPeriod: number;
+  population: number;
+  rotationPeriod: number;
+  surfaceWater: number;
+  terrains: string[];
+  filmConnection: {
+    films: Film[];
+  };
+  residentConnection: {
+    residents: Character[];
+  };
 };
