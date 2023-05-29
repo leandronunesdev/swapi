@@ -1,9 +1,8 @@
 import React from "react";
 import { getClient } from "../../lib/client";
-import { FilmCard } from "../../components";
+import { Card, CardsGrid } from "../../components";
 import { GET_FILMS } from "@/lib/queries";
 import { Film } from "@/constants/types";
-import { CardsGrid } from "@/components/CardsGrid";
 
 const Films = async () => {
   const { data } = await getClient().query({
@@ -13,7 +12,16 @@ const Films = async () => {
   return (
     <CardsGrid>
       {data.allFilms.films.map((film: Film) => {
-        return <FilmCard film={film} key={film.id} />;
+        return (
+          <Card
+            name={film.title}
+            cardType={"films"}
+            episodeID={film.episodeID}
+            releaseDate={film.releaseDate}
+            id={film.id}
+            key={film.id}
+          />
+        );
       })}
     </CardsGrid>
   );

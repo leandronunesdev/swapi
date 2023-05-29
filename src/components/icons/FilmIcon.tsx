@@ -1,10 +1,10 @@
 import React from "react";
 
-type MovieIconProps = {
+type FilmIconProps = {
   size?: number;
 };
 
-export const MovieIcon = ({ size = 32 }: MovieIconProps) => {
+export const FilmIcon = ({ size = 32 }: FilmIconProps) => {
   return (
     <svg
       version="1.1"

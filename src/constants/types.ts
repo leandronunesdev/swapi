@@ -28,4 +28,5 @@ export type Character = {
 
 export type Planet = {
   name: string;
+  id: string;
 };

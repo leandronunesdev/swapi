@@ -4,7 +4,7 @@ import { GET_FILM } from "@/lib/queries";
 import "./styles.scss";
 import { Character, Film } from "@/constants/types";
 import { convertToRoman } from "@/utils/convertToRoman";
-import { DetailsPage, MovieIcon } from "@/components";
+import { DetailsPage, FilmIcon } from "@/components";
 
 type FilmData = {
   data: {
@@ -34,7 +34,7 @@ const FilmDetails = async ({ params }: { params: { slug: string } }) => {
   return (
     <DetailsPage className="film">
       <div>
-        <MovieIcon size={40} />
+        <FilmIcon size={40} />
       </div>
       <h1>
         Episode {convertToRoman(episodeID)} - {title}

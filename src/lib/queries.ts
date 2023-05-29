@@ -35,7 +35,7 @@ export const GET_FILM = gql`
   }
 `;
 
-export const GET_ALL_PEOPLE = gql`
+export const GET_PEOPLE = gql`
   query allPeople {
     allPeople {
       people {
@@ -60,6 +60,17 @@ export const GET_PERSON = gql`
       height
       mass
       skinColor
+    }
+  }
+`;
+
+export const GET_PLANETS = gql`
+  query allPlanets {
+    allPlanets {
+      planets {
+        name
+        id
+      }
     }
   }
 `;
