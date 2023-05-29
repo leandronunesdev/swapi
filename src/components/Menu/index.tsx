@@ -1,6 +1,5 @@
 import React from "react";
 import { MenuLink } from "../MenuLink";
-
 import "./styles.scss";
 
 export const Menu = () => {

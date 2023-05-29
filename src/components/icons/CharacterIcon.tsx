@@ -21,9 +21,9 @@ export const CharacterIcon = ({ size = 32 }: CharacterIconProps) => {
               d="M20,21V19a4,4,0,0,0-4-4H8a4,4,0,0,0-4,4v2"
               fill="none"
               stroke="#fff"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
             />
 
             <circle
@@ -32,9 +32,9 @@ export const CharacterIcon = ({ size = 32 }: CharacterIconProps) => {
               fill="none"
               r="4"
               stroke="#fff"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
             />
           </g>
         </g>
