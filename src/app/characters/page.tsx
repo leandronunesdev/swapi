@@ -10,8 +10,6 @@ const Characters = async () => {
     query: GET_ALL_PEOPLE,
   });
 
-  console.log(data);
-
   return (
     <CardsGrid>
       {data.allPeople.people.map((character: Character) => {

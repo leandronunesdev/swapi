@@ -45,3 +45,21 @@ export const GET_ALL_PEOPLE = gql`
     }
   }
 `;
+
+export const GET_PERSON = gql`
+  query person($id: ID) {
+    person(id: $id) {
+      name
+      homeworld {
+        name
+      }
+      birthYear
+      eyeColor
+      gender
+      hairColor
+      height
+      mass
+      skinColor
+    }
+  }
+`;

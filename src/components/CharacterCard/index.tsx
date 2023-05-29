@@ -12,7 +12,7 @@ export const CharacterCard = ({ character }: CharacterCardProps) => {
   const slug = character.id;
 
   return (
-    <Link className="item-card" href={`/films/${slug}`}>
+    <Link className="item-card" href={`/characters/${slug}`}>
       <CharacterIcon />
       <p>{character.name}</p>
     </Link>

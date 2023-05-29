@@ -16,6 +16,14 @@ export type Film = {
 export type Character = {
   name: string;
   id: string;
+  homeworld: Planet;
+  birthYear: string;
+  eyeColor: string;
+  gender: string;
+  hairColor: string;
+  height: number;
+  mass: number;
+  skinColor: string;
 };
 
 export type Planet = {

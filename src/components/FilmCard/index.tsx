@@ -11,10 +11,10 @@ type ItemCardProps = {
 
 export const FilmCard = ({ film }: ItemCardProps) => {
   const releaseYear = new Date(film.releaseDate).getFullYear();
-  const slug = film.id.slice(0, 10);
+  // const slug = film.id.slice(0, 10);
 
   return (
-    <Link className="item-card" href={`/films/${slug}`}>
+    <Link className="item-card" href={`/films/${film.id}`}>
       <MovieIcon />
       <p>Episode {convertToRoman(film.episodeID)}</p>
       <p>{film.title}</p>

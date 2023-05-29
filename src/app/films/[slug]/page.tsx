@@ -4,7 +4,7 @@ import { GET_FILM } from "@/lib/queries";
 import "./styles.scss";
 import { Character, Film } from "@/constants/types";
 import { convertToRoman } from "@/utils/convertToRoman";
-import { MovieIcon } from "@/components/icons";
+import { DetailsPage, MovieIcon } from "@/components";
 
 type FilmData = {
   data: {
@@ -13,11 +13,11 @@ type FilmData = {
 };
 
 const FilmDetails = async ({ params }: { params: { slug: string } }) => {
-  const { slug } = params;
+  const id = params.slug.replace("%3D", "=");
 
   const { data }: FilmData = await getClient().query({
     query: GET_FILM,
-    variables: { id: slug },
+    variables: { id: id },
   });
 
   const {
@@ -32,7 +32,7 @@ const FilmDetails = async ({ params }: { params: { slug: string } }) => {
   const releaseYear = new Date(releaseDate).getFullYear();
 
   return (
-    <div className="film">
+    <DetailsPage className="film">
       <div>
         <MovieIcon size={40} />
       </div>
@@ -48,7 +48,7 @@ const FilmDetails = async ({ params }: { params: { slug: string } }) => {
           return <li key={character.name}>{character.name}</li>;
         })}
       </ul>
-    </div>
+    </DetailsPage>
   );
 };
 
