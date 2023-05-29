@@ -42,9 +42,11 @@ const PlanetDetails = async ({ params }: { params: { slug: string } }) => {
           Population: <strong>{population.toLocaleString("en-US")}</strong>
         </p>
       )}
-      <p>
-        Diameter: <strong>{diameter.toLocaleString("en-US")}</strong>
-      </p>
+      {diameter && (
+        <p>
+          Diameter: <strong>{diameter.toLocaleString("en-US")}</strong>
+        </p>
+      )}
       <p>
         Orbital Period: <strong>{orbitalPeriod} days</strong>
       </p>
