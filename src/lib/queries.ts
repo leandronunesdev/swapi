@@ -89,6 +89,7 @@ export const GET_PLANET = gql`
       filmConnection {
         films {
           title
+          id
         }
       }
       residentConnection {

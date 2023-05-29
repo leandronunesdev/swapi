@@ -1,4 +1,4 @@
-import { DetailsPage, PlanetIcon } from "@/components";
+import { CustomLink, DetailsPage, PlanetIcon } from "@/components";
 import { Character, Film, Planet } from "@/constants/types";
 import { getClient } from "@/lib/client";
 import { GET_PLANET } from "@/lib/queries";
@@ -31,8 +31,6 @@ const PlanetDetails = async ({ params }: { params: { slug: string } }) => {
     filmConnection,
     residentConnection,
   } = data.planet;
-
-  console.log(residentConnection);
 
   return (
     <DetailsPage className="planet">
@@ -70,13 +68,23 @@ const PlanetDetails = async ({ params }: { params: { slug: string } }) => {
       <p>Films:</p>
       <ul>
         {filmConnection.films.map((film: Film) => (
-          <li key={film.id}>{film.title}</li>
+          <CustomLink
+            title={film.title}
+            key={film.id}
+            id={film.id}
+            type={"films"}
+          />
         ))}{" "}
       </ul>
       <p>Characters:</p>
       <ul>
         {residentConnection.residents.map((character: Character) => (
-          <li key={character.id}>{character.name}</li>
+          <CustomLink
+            title={character.name}
+            key={character.id}
+            id={character.id}
+            type={"characters"}
+          />
         ))}{" "}
       </ul>
     </DetailsPage>
