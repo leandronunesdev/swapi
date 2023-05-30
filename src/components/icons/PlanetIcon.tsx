@@ -12,7 +12,9 @@ export const PlanetIcon = ({ size = 32 }: PlanetIconProps) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      id="planet-icon"
     >
+      <title>Planet Icon</title>
       <g id="Environment / Planet">
         <path
           id="Vector"
