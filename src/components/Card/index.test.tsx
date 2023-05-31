@@ -31,13 +31,7 @@ describe("<Card cardType='films' />", () => {
 describe("<Card cardType='characters' />", () => {
   it("should render a link with the character name", async () => {
     render(
-      <Card
-        cardType="characters"
-        name="character Name"
-        id="characterId"
-        episodeID={5}
-        releaseDate="1977-05-25"
-      />
+      <Card cardType="characters" name="character Name" id="characterId" />
     );
 
     const card = screen.getByRole("link", { name: /character name/i });
@@ -51,15 +45,7 @@ describe("<Card cardType='characters' />", () => {
 
 describe("<Card cardType='planets' />", () => {
   it("should render a link with the planet name", async () => {
-    render(
-      <Card
-        cardType="planets"
-        name="planet Name"
-        id="planetId"
-        episodeID={5}
-        releaseDate="1977-05-25"
-      />
-    );
+    render(<Card cardType="planets" name="planet Name" id="planetId" />);
 
     const card = screen.getByRole("link", { name: /planet name/i });
     const icon = screen.getByTitle(/planet icon/i);

@@ -11,7 +11,7 @@ export const Menu = () => {
   ];
 
   return (
-    <div className="menu">
+    <div className="menu" data-testid="menu">
       {menuOptions.map((option) => {
         return (
           <MenuLink
