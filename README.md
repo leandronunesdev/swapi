@@ -79,7 +79,7 @@ Made with ❤️ by Leandro Nunes
 
 👋🏽 Reach out!
 
-<a href="https://leandronunes.dev/">Website<a> |
-<a href="https://www.linkedin.com/in/nunesprofissional/">Linkedin<a> |
-<a href="mailto:https://www.linkedin.com/in/nunesprofissional/">E-mail<a> |
-<a href="https://twitter.com/leandro_nunes">Twitter<a>
+<a href="https://leandronunes.dev/" target="_blank" rel="noreferrer">Website<a> |
+<a href="https://www.linkedin.com/in/leandronunesdev/" target="_blank" rel="noreferrer">Linkedin<a> |
+<a href="mailto:nunes.pessoal@gmail.com">E-mail<a> |
+<a href="https://twitter.com/leandro_nunes" target="_blank" rel="noreferrer">Twitter<a>
