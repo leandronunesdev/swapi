@@ -1,34 +1,85 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Star Wars Wiki
 
-## Getting Started
+## Star Wars Wiki app using Star Wars GraphQL API
 
-First, run the development server:
+<p align="center">
+ <a href="#features">Features</a> •
+ <a href="#demo">App Preview</a> •
+ <a href="#requirements">Requirements</a> •
+ <a href="#technologies">Technologies</a> • 
+ <a href="#author">Author</a>
+</p>
+
+<h4 align="center"> 
+	Finished project ✅
+</h4>
+
+<h1 id="features">Features</h1>
+
+- [x] Films list and info details
+- [x] Characters list and info details
+- [x] Planets list and info details
+
+<h1 id="demo">App Preview</h1>
+
+<h1 align="center">
+  <img alt="Star Wars Wiki" title="#StarWarsWiki" src="./src/assets/star-wars-wiki-demo.png" />
+</h1>
+
+You can see the app in production [here](https://swapi-green.vercel.app/)
+
+<h1 id="requirements">Requirements</h1>
+
+Before starting, you need to install in your machines the following tools:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
+Besides that, is good to have a good code editor as [VSCode](https://code.visualstudio.com/)
+
+## 🎲 Running the App
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+# Clone this repository
+$ git clone <https://github.com/leandronunesdev/swapi>
+
+# Access the project folder using terminal/cmd
+$ cd swapi
+
+# Install the dependencies
+$ npm install
+
+# Execute the application on development mode
+$ npm run dev
+
+# The server will start on port:3000 - access <http://localhost:3000>
+
+# Run the tests
+$ npm run test
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<h1 id="technologies">🛠 Technologies</h1>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The following tools were used on this project:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [Next.JS](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Sass](https://sass-lang.com/)
+- [Apollo](https://www.apollographql.com/)
+- [Star Wars GraphQL API](https://studio.apollographql.com/public/star-wars-swapi/variant/current/home)
+- [Jest](https://jestjs.io/)
+- [React Test Library](https://testing-library.com/)
 
-## Learn More
+<h1 id="author">🛠 Author</h1>
 
-To learn more about Next.js, take a look at the following resources:
+<a href="https://github.com/leandronunesdev">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/60386045?s=460&u=b81d71f87ddbf5a2da61abf86227ede788de7d32&v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>Leandro Nunes</b></sub></a> <a href="https://github.com/leandronunesdev" title="Leandro">🚀</a>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Made with ❤️ by Leandro Nunes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+👋🏽 Reach out!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<a href="https://leandronunes.dev/">Website<a> |
+<a href="https://www.linkedin.com/in/nunesprofissional/">Linkedin<a> |
+<a href="mailto:https://www.linkedin.com/in/nunesprofissional/">E-mail<a> |
+<a href="https://twitter.com/leandro_nunes">Twitter<a>
