@@ -16,14 +16,14 @@ export type Film = {
 export type Character = {
   name: string;
   id: string;
-  homeworld: Planet;
-  birthYear: string;
-  eyeColor: string;
-  gender: string;
-  hairColor: string;
-  height: number;
-  mass: number;
-  skinColor: string;
+  homeworld: Planet | null;
+  birthYear: string | null;
+  eyeColor: string | null;
+  gender: string | null;
+  hairColor: string | null;
+  height: number | null;
+  mass: number | null;
+  skinColor: string | null;
   filmConnection: {
     films: Film[];
   };
@@ -32,13 +32,13 @@ export type Character = {
 export type Planet = {
   name: string;
   id: string;
-  climates: string[];
-  diameter: number;
-  orbitalPeriod: number;
-  population: number;
-  rotationPeriod: number;
-  surfaceWater: number;
-  terrains: string[];
+  climates: string[] | null;
+  diameter: number | null;
+  orbitalPeriod: number | null;
+  population: number | null;
+  rotationPeriod: number | null;
+  surfaceWater: number | null;
+  terrains: string[] | null;
   filmConnection: {
     films: Film[];
   };
